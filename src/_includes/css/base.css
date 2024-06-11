@@ -8,15 +8,15 @@ html {
     font-size: var(--size);
 }
 
+body {
+    margin: 0;
+}
+
 header {
     text-align: center ;
     h1 {
         font-family: cursive;
     }
-}
-
-section {
-    overflow-x: auto;
 }
 
 pre {

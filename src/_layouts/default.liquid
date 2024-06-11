@@ -2,24 +2,23 @@
 layout: base
 ---
 <header>
-    {% include 'navigation/dropdown' %}
+    {% include 'navigation/primary' %}
     <h1>{{ site.name }}</h1>
 </header>
-<main>
-    {%- if folder %}
+<main-body>
+    {%- if tags contains 'secondary' %}
     <aside>
         {% include 'navigation/secondary' %}
     </aside>
     {% endif %}
-    <section aria-labelledby="{{ title | slugify }}">
-        {%- if tags contains 'dropdown' %}{% include 'pagination/dropdown' %}{% endif %}
-        {%- if tags contains 'secondary' %}{% include 'pagination/paginate-collections' %}{% endif %}
+    <main aria-labelledby="{{ title | slugify }}">
+        {%- if navigation %}{% include 'navigation/collection' %}{% endif %}
         <h2 id="{{ title | slugify }}">{{ title }}</h2>
         {%- if description %}<p>{{ description }}</p>{% endif %}
         {{ content }}
-    </section>
-</main>
+    </main>
+</main-body>
 <footer>
     {%- include 'navigation/footer' %}
-    {%- render 'copyright' %}
+    {%- include 'copyright' %}
 </footer>

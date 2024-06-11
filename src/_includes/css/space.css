@@ -8,7 +8,7 @@ aside nav ul {
 }
 
 header>*,
-main>*,
+main-body>*,
 footer>* {
     margin: var(--spacing);
     padding: 0 var(--spacing);

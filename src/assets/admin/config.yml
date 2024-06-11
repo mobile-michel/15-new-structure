@@ -4,7 +4,7 @@ backend: # Required
 media_folder: "src/assets/img/" # Required
 public_folder: "assets/img/" # Required
 local_backend: true # Run "npx decap-server" for local backend | optional
-display_url: https://mobile-michel.github.io/13-simple-blog/
+display_url: /
 collections: # Required
   - name: "pages" # Required. Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Required. Used in the UI
@@ -65,7 +65,7 @@ collections: # Required
         name: "Tokens"
         file: "src/_data/tokens.json"
         fields:
-          - { label: Size, name: size, widget: select, options: [{ label: "small", value: "10px" }, { label: "medium", value: "12px" }, { label: "big", value: "14px" }] }
+          - { label: Size, name: size, widget: select, options: [{ label: "tiny", value: "12px" }, { label: "small", value: "14px" }, { label: "medium", value: "16px" }, { label: "big", value: "18px" }, { label: "huge", value: "20px" }] }
           - { label: Hue, name: hue, widget: select, options: [{ label: "red", value: "0" }, { label: "red-orange", value: "18" }, { label: "orange", value: "20" }, { label: "orange-yellow", value: "45" }, { label: "yellow", value: "60" }, { label: "yellow-green", value: "90" }, { label: "green", value: "120" }, { label: "green-blue", value: "180" }, { label: "blue", value: "240" }, { label: "blue-purple", value: "270" }, { label: "purple", value: "280" }, { label: "purple-red", value: "300" }] }
           - { label: Saturation, name: saturation, widget: select, options: [{ label: "very saturated", value: "99%" }, { label: "saturated", value: "80%" }, { label: "medium", value: "50%" }, { label: "pale", value: "30%" }, { label: "very pale", value: "10%" }] }
           - { label: Lightness, name: lightness, widget: select, options: [{ label: "very light", value: "80%" }, { label: "light", value: "65%" }, { label: "medium", value: "50%" }, { label: "dark", value: "35%" }, { label: "very dark", value: "20%" }] }

@@ -1,12 +1,10 @@
 <nav aria-label="Secondary">
-  <h3>{{ folder | capitalize }}</h3>
+  <h3>{{ navigation | capitalize }}</h3>
   <ul>
-    {% for nav in collections.secondary %}
-    {%- if nav.data.folder == folder %}
+    {% for nav in collections[navigation] %}
     <li {% if page.url==nav.url %}aria-current="page" {% endif %}>
       <a href="{{ nav.url | url }}">{{ nav.data.title }}</a>
     </li>
-    {% endif %}
     {% endfor %}
   </ul>
 </nav>

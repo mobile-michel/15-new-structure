@@ -9,10 +9,27 @@
   <link rel="icon" href="{{ site.favicon }}" type="image/svg+xml">
   <title>{{ title }} - {{ site.name }}</title>
   <link rel="stylesheet" href="{{ site.css | url }}">
+  {% if decapcms %}
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>{% endif %}
 </head>
 
 <body>
-  {{ content }}
+  <body-container>
+    {{ content }}
+  </body-container>
+  {% if decapcms %}
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  {% endif %}
 </body>
 
 </html>

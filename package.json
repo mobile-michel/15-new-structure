@@ -1,11 +1,11 @@
 {
   "name": "15-new-structure",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Multi blog with Eleventy, Liquid & DecapCMS",
   "main": "eleventy.config.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "serve": "npx decap-server & npx @11ty/eleventy --serve",
+    "decap": "npx decap-server & npx @11ty/eleventy --serve",
     "build": "eleventy",
     "build-gp": "eleventy --pathprefix '15-new-structure'"
   },

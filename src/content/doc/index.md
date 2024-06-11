@@ -1,10 +1,18 @@
 ---
 title: Documentation
+link-name: Doc
 description: This is documentation.
-layout: default
-date: 2024-01-03
-override:tags: ["primary", "footer"]
+date: 2024-01-02
+tags: ["primary", "footer"]
 ---
-{% for post in collections.blog %}
-- [{{ post.data.title }}]({{ post.data.title | slugify | prepend: '/blog/' | append: '/' | url }}) published on {{ post.data.date | date: '%d  %b %Y' }} by {{ post.data.author }}
+{% for post in collections.doc %}
+- [{{ post.data.title }}]({{ post.url | url }}) published on {{ post.data.date | date: '%d  %b %Y' }}, source is {{ post.data.author }}
+{% endfor %}
+
+### Test
+
+
+
+{% for i in collections[navigation] %}
+- [{{ i.data.title }}]({{ i.url }})
 {% endfor %}

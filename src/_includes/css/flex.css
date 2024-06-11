@@ -3,24 +3,25 @@
 /* flex.css */
 /************/
 
-body {
+body-container {
     max-width: var(--max-width);
+    height: 100vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 
-main {
-    flex: 1;
+main-body {
+    flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
 }
 
-main aside {
+main-body aside {
     flex-grow: 1;
 }
 
-main section {
+main {
     flex: 3 1 21em;
 }
