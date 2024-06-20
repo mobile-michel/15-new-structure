@@ -2,7 +2,7 @@ backend:
   name: github
   branch: main
   repo: mobile-michel/15-new-structure
-  base_url: https://auth.amazing-oauth.name/
+  base_url: https://api.netlify.com/auth/done
 media_folder: "src/assets/img/" # Required
 public_folder: "assets/img/" # Required
 local_backend: true # Run "npx decap-server" for local backend | optional
